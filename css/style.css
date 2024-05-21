@@ -1,0 +1,130 @@
+@import url("reset.css");
+
+body {
+
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  color: #2d2d2d;
+  line-height: 1.5;
+}
+
+.main {
+  max-width: 1380px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.main__container {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+  gap: 24px;
+}
+.main__cart {
+}
+.cart {
+  min-height: 527px;
+  border: 2px solid;
+  border-radius: 4px;
+  padding: 24px;
+  display: grid;
+  row-gap: 24px;
+  align-items: start;
+}
+.cart__image {
+  justify-self: center;
+
+}
+
+.cart__icon {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.cart__icon--tap,
+.cart__icon--door,
+.cart__icon--cub {
+  fill: #179D2E;
+}
+.cart__icon--paint,
+.cart__icon--picture {
+  fill: #0177B8;
+}
+.cart__icon--frame,
+.cart__icon--instalation {
+  fill: #F5AF23;
+}
+.cart__icon--electra,
+.cart__icon--home {
+  fill: #F02E2C;
+}
+
+
+.cart__title {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #181833;
+}
+.cart__items {
+  padding-left: 24px;
+}
+.cart__item {
+}
+.cart__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.cart__link {
+  position: relative;
+  justify-self: center;
+  transition: color 0.3s;
+}
+
+.cart__link::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #2d2d2d;
+  transition: background-color 0.3s;
+}
+
+.cart__link:hover {
+  color: #0177B8;
+}
+
+.cart__link:hover::before {
+  background-color: #0177B8;
+}
+
+.main__cart:nth-child(4n + 1) {
+  border-color: #179D2E;
+}
+.main__cart:nth-child(4n + 2) {
+  border-color: #0177B8;
+}
+.main__cart:nth-child(4n + 3) {
+  border-color: #F5AF23;
+}
+.main__cart:nth-child(4n + 4) {
+  border-color: #F02E2C;
+}
+
+
+@media (min-width: 576px ) {
+  .main__container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+@media (min-width: 694px ) {
+  .cart__image {
+    justify-self: end;
+  }
+
+  .cart__link {
+    justify-self: end;
+  }
+}
