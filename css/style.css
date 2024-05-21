@@ -9,6 +9,8 @@ body {
 }
 
 .main {
+  padding-top: 25px;
+  padding-bottom: 25px;
   max-width: 1380px;
   padding-left: 15px;
   padding-right: 15px;
